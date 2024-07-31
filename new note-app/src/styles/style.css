@@ -36,16 +36,22 @@ body {
     background-color: #f2f2f2;
 }
 
-/* MAIN */
-main {
-  min-height: 100vh;
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    height: 100vh;
+    gap: 10px; /* Opsional, untuk menambahkan jarak antar item */
+}
+
+.item-3{
+    align-self: end;
 }
 
 .wrapper {
     margin: 50px;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fill, 265px);
+    grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
 }
 
 .wrapper li{
